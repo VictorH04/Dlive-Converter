@@ -1,0 +1,58 @@
+/* ===== Universal Things ===== */
+
+:root {
+    //* COLORS
+
+
+    //* SHADOWS
+
+
+    //* BORDERS
+
+
+    //* MARGINS
+
+
+    //* PADDINGS
+
+
+    //* FONT-SIZES
+
+}
+
+/* MEDIA QUERY SIZES */
+$bp-largest: 75em; // 1200px === 75em
+$bp-large: 68.75em; // 1100px === 68.75em
+$bp-medium: 56.25em; // 900px === 56.25em
+$bp-small: 37.5em; // 600px === 37.5em
+$bp-smallest: 31.25em; // 500px === 31.25em
+$bp-phone: 23.75em; // 380px
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // ! This defines what 1rem is.
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Hind', sans-serif;
+    min-height: 100vh;
+
+    // MEDIA QUERY
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
+}
+
+body {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
