@@ -1,35 +1,80 @@
-.body_container {}
-
-.wrapper {}
-
 .grid_container {
     display: grid;
-    grid-template-rows: 10rem 30rem 30rem 5rem;
+    grid-template-rows: 14rem 30rem 30rem 5rem;
     grid-template-columns: repeat(4, 30rem);
-    grid-template-areas: "header header header header"
-        "main main main sidebar"
-        "main main main sidebar"
+    grid-template-areas: "header header header header""main main main sidebar""main main main sidebar"
         "footer footer footer footer";
 
-
+    box-shadow: var(--shadow-dark-1);
 
     &__header {
+        position: relative;
+        display: flex;
         grid-area: header;
-        background-color: greenyellow;
+        background-color: var(--primary-color);
+        padding: 1rem;
+
+        &--logo {
+            align-self: center;
+            width: 10rem;
+            height: 10rem;
+            background-image: url(/img/NinjaCircle_Small.png);
+            background-size: cover;
+            margin-right: 1rem;
+        }
+
+        &--title {
+            align-self: center;
+
+            font-family: Kelly Slab;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: var(--fs-primary);
+            letter-spacing: .2rem;
+
+            border-bottom: var(--border-bottom-1);
+        }
+
+        &--about {
+            font-size: var(--fs-primary);
+            align-self: center;
+            color: #000;
+
+            font-weight: 400;
+            text-decoration: none;
+            font-family: Saira;
+
+            position: absolute;
+            right: 5rem;
+            transition: all .3s;
+        }
+
+        &--about::after {
+            content: '';
+            display: block;
+            width: 0rem;
+            height: .2rem;
+            background: #000;
+            transition: all .3s ease-out;
+        }
+
+        &--about:hover::after {
+            width: 100%;
+        }
     }
 
     &__maincontent {
         grid-area: main;
-        background-color: crimson;
+        background-color: #aaa69d;
     }
 
     &__sidebar {
         grid-area: sidebar;
-        background-color: coral;
+        background-color: #e1b12c;
     }
 
     &__footer {
         grid-area: footer;
-        background-color: blueviolet;
+        background-color: var(--primary-color);
     }
 }

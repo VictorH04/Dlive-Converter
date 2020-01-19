@@ -2,13 +2,16 @@
 
 :root {
     //* COLORS
-
+    --primary-color: #ffd300;
 
     //* SHADOWS
-
+    --shadow-light-1: 0 3.5rem 4rem rgba(0, 0, 0, .4);
+    --shadow-dark-1: 0 2rem 6rem rgba(0, 0, 0, .4);
+    --shadow-dark-2: 0 3rem 5rem rgba(0, 0, 0, .6);
+    --shadow-dark-3: 0 1.5rem 7rem rgba(0, 0, 0, .8);
 
     //* BORDERS
-
+    --border-bottom-1: .2rem solid #000;
 
     //* MARGINS
 
@@ -17,7 +20,7 @@
 
 
     //* FONT-SIZES
-
+    --fs-primary: 3rem;
 }
 
 /* MEDIA QUERY SIZES */
@@ -55,4 +58,6 @@ body {
     min-height: 100vh;
     display: grid;
     place-items: center;
+
+    background-image: linear-gradient(to right bottom, #fff7e4, #84817a);
 }

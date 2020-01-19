@@ -1,22 +1,69 @@
 .grid_container {
   display: grid;
-  grid-template-rows: 10rem 30rem 30rem 5rem;
+  grid-template-rows: 14rem 30rem 30rem 5rem;
   grid-template-columns: repeat(4, 30rem);
-  grid-template-areas: "header header header header" "main main main sidebar" "main main main sidebar" "footer footer footer footer"; }
+  grid-template-areas: "header header header header" "main main main sidebar" "main main main sidebar" "footer footer footer footer";
+  box-shadow: var(--shadow-dark-1); }
   .grid_container__header {
+    position: relative;
+    display: flex;
     grid-area: header;
-    background-color: greenyellow; }
+    background-color: var(--primary-color);
+    padding: 1rem; }
+    .grid_container__header--logo {
+      align-self: center;
+      width: 10rem;
+      height: 10rem;
+      background-image: url(/img/NinjaCircle_Small.png);
+      background-size: cover;
+      margin-right: 1rem; }
+    .grid_container__header--title {
+      align-self: center;
+      font-family: Kelly Slab;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: var(--fs-primary);
+      letter-spacing: .2rem;
+      border-bottom: var(--border-bottom-1); }
+    .grid_container__header--about {
+      font-size: var(--fs-primary);
+      align-self: center;
+      color: #000;
+      font-weight: 400;
+      text-decoration: none;
+      font-family: Saira;
+      position: absolute;
+      right: 5rem;
+      transition: all .3s; }
+    .grid_container__header--about::after {
+      content: '';
+      display: block;
+      width: 0rem;
+      height: .2rem;
+      background: #000;
+      transition: all .3s ease-out; }
+    .grid_container__header--about:hover::after {
+      width: 100%; }
   .grid_container__maincontent {
     grid-area: main;
-    background-color: crimson; }
+    background-color: #aaa69d; }
   .grid_container__sidebar {
     grid-area: sidebar;
-    background-color: coral; }
+    background-color: #e1b12c; }
   .grid_container__footer {
     grid-area: footer;
-    background-color: blueviolet; }
+    background-color: var(--primary-color); }
 
 /* ===== Universal Things ===== */
+:root {
+  --primary-color: #ffd300;
+  --shadow-light-1: 0 3.5rem 4rem rgba(0, 0, 0, .4);
+  --shadow-dark-1: 0 2rem 6rem rgba(0, 0, 0, .4);
+  --shadow-dark-2: 0 3rem 5rem rgba(0, 0, 0, .6);
+  --shadow-dark-3: 0 1.5rem 7rem rgba(0, 0, 0, .8);
+  --border-bottom-1: .2rem solid #000;
+  --fs-primary: 3rem; }
+
 /* MEDIA QUERY SIZES */
 *,
 *::after,
@@ -39,4 +86,5 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
   display: grid;
-  place-items: center; }
+  place-items: center;
+  background-image: linear-gradient(to right bottom, #fff7e4, #84817a); }
