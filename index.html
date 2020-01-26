@@ -11,6 +11,7 @@
         integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Saira:300,400,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kelly+Slab&display=swap" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -33,13 +34,52 @@
                 <a href="#" class="grid_container__header--about" id="about">About</a>
             </div>
 
-            <div class="grid_container__maincontent">
-                Main content
+            <div class="grid_container__sidebar">
+                <div class="grid_container__sidebar--title">
+                    Current rates for 🍋
+                </div>
+
+                <div class="grid_container__sidebar--container">
+                    <div class="grid_container__sidebar--ratesContainer">
+                        <li class="grid_container__sidebar--ratesContainer-value1">
+                            Lemon: 1 ≡ 1.2 ¢</li>
+                        <li class="grid_container__sidebar--ratesContainer-value2">
+                            Ice Cream: 1 ≡ 12 ¢</li>
+                        <li class="grid_container__sidebar--ratesContainer-value3">
+                            Diamond: 1 ≡ 1.2 $</li>
+                        <li class="grid_container__sidebar--ratesContainer-value4">
+                            Ninjaghini: 1 ≡ 12 $</li>
+                        <li class="grid_container__sidebar--ratesContainer-value5">
+                            Ninjet: 1 ≡ 120 $</li>
+                    </div>
+                </div>
             </div>
 
-            <div class="grid_container__sidebar">
-                Sidebar
-            </div>
+            <div class="grid_container__maincontent">
+                <div class="grid_container__maincontent--wrapper">
+                    <div class="grid_container__maincontent--wrapper-title">Convert Here</div>
+                </div>
+
+                <div class="grid_container__maincontent--inputFields">
+                    <input class="grid_container__maincontent--inputFields-fields" type="text" name="Lemons" placeholder="🍋" id="inputLemon">
+                    <span class="grid_container__maincontent--inputFields-rightArrow">&rarr;</span>
+                    <input class="grid_container__maincontent--inputFields-fields" type="text" name="USD" placeholder="USD" id="inputUSD">
+                </div>
+                
+                <div class="grid_container__maincontent--buttonWrappers">
+                   
+                    <div class="grid_container__maincontent--buttonWrappers-convertButton">
+                        <button class="grid_container__maincontent--buttonWrappers-convertButton-btn" type="submit" id="convertBtn"><p>Convert</p></button>
+                    </div>
+
+                    <div class="grid_container__maincontent--buttonWrappers-switchButton">
+                        <button class="grid_container__maincontent--buttonWrappers-switchButton-btn" type="submit" id="switchBtn"><p>Switch</p></button>
+                    </div>
+
+                </div>
+            
+        
+        </div>
 
             <div class="grid_container__footer">
                 Footer
@@ -49,6 +89,7 @@
 
     </div>
 
+    <script src="/JS/app.js"></script>
 </body>
 
 </html>
