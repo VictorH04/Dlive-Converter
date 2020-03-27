@@ -11,7 +11,7 @@
         integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Saira:300,400,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kelly+Slab&display=swap" rel="stylesheet">
-    
+
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                     Dlive currency converter
                 </div>
 
-                <a href="#" class="grid_container__header--about" id="about">About</a>
+                <button class="grid_container__header--about" id="about">About</button>
             </div>
 
             <div class="grid_container__sidebar">
@@ -60,34 +60,84 @@
                     <div class="grid_container__maincontent--wrapper-title">Convert Here</div>
                 </div>
 
-                <div class="grid_container__maincontent--inputFields">
-                    <input class="grid_container__maincontent--inputFields-fields" type="text" name="Lemons" placeholder="🍋" id="inputLemon">
-                    <span class="grid_container__maincontent--inputFields-rightArrow">&rarr;</span>
-                    <input class="grid_container__maincontent--inputFields-fields" type="text" name="USD" placeholder="USD" id="inputUSD">
-                </div>
-                
-                <div class="grid_container__maincontent--buttonWrappers">
-                   
-                    <div class="grid_container__maincontent--buttonWrappers-convertButton">
-                        <button class="grid_container__maincontent--buttonWrappers-convertButton-btn" type="submit" id="convertBtn"><p>Convert</p></button>
+                <form class="grid_container__maincontent--inputForm" id="inputForm">
+                    <div class="grid_container__maincontent--inputFields">
+                        <input class="grid_container__maincontent--inputFields-fields" type="text" name="Lemons"
+                            placeholder="🍋" id="inputLemon" autocomplete="off">
+                        <span class="grid_container__maincontent--inputFields-rightArrow">&rarr;</span>
+                        <input class="grid_container__maincontent--inputFields-fields" type="text" name="USD"
+                            placeholder="💲 USD 💲" id="inputUSD" autocomplete="off">
                     </div>
 
-                    <div class="grid_container__maincontent--buttonWrappers-switchButton">
-                        <button class="grid_container__maincontent--buttonWrappers-switchButton-btn" type="submit" id="switchBtn"><p>Switch</p></button>
+                    <div class="grid_container__maincontent--buttonWrappers">
+
+                        <div class="grid_container__maincontent--buttonWrappers-convertButton">
+                            <button class="grid_container__maincontent--buttonWrappers-convertButton-btn" type="submit"
+                                id="convertBtn">
+                                <p>Convert</p>
+                            </button>
+                        </div>
+
+                        <div class="grid_container__maincontent--buttonWrappers-switchButton">
+                            <button class="grid_container__maincontent--buttonWrappers-switchButton-btn" type="submit"
+                                id="switchBtn">
+                                <p>Switch</p>
+                            </button>
+                        </div>
+
+                        <div class="grid_container__maincontent--buttonWrappers-clearButton">
+                            <button class="grid_container__maincontent--buttonWrappers-clearButton-btn" type="submit"
+                                id="clearBtn">
+                                <p>Clear</p>
+                            </button>
+                        </div>
+
                     </div>
 
-                </div>
-            
-        
-        </div>
+                </form>
+
+
+
+
+            </div>
 
             <div class="grid_container__footer">
-                Footer
+                <p class="grid_container__footer--Credit">This Website was made for <a href="https://dlive.tv/"
+                        class="grid_container__footer--Credit-Dlive">Dlive.</a> The Website was made by <a
+                        href="https://dlive.tv/" class="grid_container__footer--Credit-Victor">Victor N. Hristov.</a>
+                </p>
             </div>
         </div>
-
-
     </div>
+
+    <!-- MODAL -->
+    <div class="about-modal__background">
+        <div class="about-modal__content">
+            <div class="about-modal__close">
+                &times;
+            </div>
+
+            <p class="about-modal__content--paragraph1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolorum libero voluptas optio nemo
+                voluptate vitae odio illo aliquid atque accusantium, earum suscipit vel aspernatur iusto a autem rem!
+                Molestias tenetur sequi, atque delectus excepturi tempore doloremque aperiam consectetur autem esse
+                dolorum, officia modi libero corporis explicabo. Exercitationem, optio et quibusdam eos placeat corporis
+                atque maiores. Sequi expedita, consequatur eius quae ex ullam ipsam voluptatem natus, illum aperiam,
+                iste non dolorum quasi repudiandae pariatur incidunt odit maiores impedit dolorem tempora vitae eligendi
+                omnis alias sit. Cupiditate deserunt, quia nemo sequi dolore voluptates aperiam fugiat nisi.
+            </p>
+
+            <!-- <p class="about-modal__content--paragraph2">
+
+            </p> -->
+
+            <div class="about-modal__content--logo">
+                <img src="/img/Full_Logo_Original.png" alt="Dlive Full_Logo_Original">
+            </div>
+
+        </div>
+    </div>
+
 
     <script src="/JS/app.js"></script>
 </body>

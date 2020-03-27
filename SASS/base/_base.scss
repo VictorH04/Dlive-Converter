@@ -2,7 +2,9 @@
 
 :root {
     //* COLORS
-    --primary-color: #ffd300;
+    --primary-yellow: #ffd300;
+    --primary-darkYellow: #e4aa0b;
+    --primary-blue: #40437c;
 
     //* SHADOWS
     --shadow-light-1: 0 3.5rem 4rem rgba(0, 0, 0, .4);
@@ -15,6 +17,7 @@
     --border-bottom-2: .2rem solid #ffd300;
     --border-bottom-3: .5rem solid #ffd300;
     --border-bottom-4: .1rem solid #ffd300;
+    --border-bottom-5: .2rem solid #40437c;
 
     //* MARGINS
 
@@ -25,7 +28,7 @@
     //* FONT-SIZES
     --fs-heading: 3rem;
     --fs-title: 2.5rem;
-    --fs-text: 1.25rem;
+    --fs-text: 1.5rem;
 }
 
 /* MEDIA QUERY SIZES */
@@ -34,7 +37,7 @@ $bp-large: 68.75em; // 1100px === 68.75em
 $bp-medium: 56.25em; // 900px === 56.25em
 $bp-small: 37.5em; // 600px === 37.5em
 $bp-smallest: 31.25em; // 500px === 31.25em
-$bp-phone: 23.75em; // 380px
+$bp-phone: 23.75em; // 380px === 23.75em
 
 *,
 *::after,
