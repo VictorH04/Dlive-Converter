@@ -55,8 +55,12 @@ html {
     min-height: 100vh;
 
     // MEDIA QUERY
-    @media only screen and (max-width: $bp-large) {
+    @media screen and (max-width: $bp-large) {
         font-size: 50%;
+    }
+
+    @media screen and (max-width: $bp-small) {
+        font-size: 25%;
     }
 }
 

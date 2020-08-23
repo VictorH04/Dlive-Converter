@@ -8,12 +8,14 @@
     box-shadow: var(--shadow-dark-1);
     transition: all .3s;
 
+
     &__header {
         position: relative;
         display: flex;
         grid-area: header;
         background-color: var(--primary-yellow);
         padding: 1rem;
+
 
         &--logo {
             align-self: center;
@@ -299,6 +301,10 @@
         grid-area: footer;
         background-color: var(--primary-yellow);
 
+        @media screen and (max-width: $bp-large) {
+            font-size: 50%;
+        }
+
         &--Credit {
             font-size: var(--fs-text);
             font-weight: 400;
@@ -369,7 +375,11 @@
 
 
         &--paragraph1 {
-            padding: 2rem;
+            padding-right: 4rem;
+            padding-left: 4rem;
+
+            padding-top: 2rem;
+            padding-bottom: 2rem;
 
             font-size: var(--fs-text);
             grid-area: square1;
