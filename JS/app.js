@@ -96,12 +96,12 @@ function multiplyLemon() {
 }
 
 function switchInputs() {
-	let tmp = usdContainer;
+	let tmp = usdContainer.innerHTML;
 
-	usdContainer = lemonContainer;
+	usdContainer.innerHTML = lemonContainer.innerHTML;
 	lemonContainer = tmp;
 
 	console.log(tmp);
-	console.log(usdContainer);
+	console.log(usdContainer.parentNode);
 }
 // ! ================================================================
