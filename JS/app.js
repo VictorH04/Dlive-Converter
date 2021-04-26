@@ -25,18 +25,26 @@ inputLemon.addEventListener("click", function (event) {
 inputUSD.addEventListener("click", function (event) {
   console.log(event.target);
 });
+let switchInputBoolean = false;
 
 switchBtn.addEventListener("click", function (event) {
+  switchInputBoolean = true;
   switchInputs();
   cleanFields();
 });
 
 convertBtn.addEventListener("click", function () {
-  if (inputLemon.value === "" && inputUSD.value === "") {
-    alert("Please enter a value!");
+  if ((switchInputBoolean === false)) {
+    multiplyLemon();
   } else {
-    callBoth();
+    usdMultiply();
   }
+
+  // if (inputLemon.value === "" && inputUSD.value === "") {
+  //   alert("Please enter a value!");
+  // } else {
+  //   usdMultiply();
+  // }
 });
 
 clearBtn.addEventListener("click", function () {
@@ -97,6 +105,7 @@ function multiplyLemon() {
     inputUSD.value = `${toValue.toFixed(1)} 💲`;
   }
 
+  console.log(switchInputBoolean.valueOf());
   // console.log(inputUSD);
 }
 
@@ -114,21 +123,18 @@ function usdMultiply() {
   console.log(toValue);
 }
 
-let usdBefore;
-let lemonAfter;
-usdBefore = inputParent.insertAdjacentElement("afterbegin", usd);
-lemonAfter = inputParent.insertAdjacentElement("beforeend", lemon);
-
 function switchInputs() {
   let usd = inputParent.children[2];
   let lemon = inputParent.children[0];
 
   usdBefore = inputParent.insertAdjacentElement("afterbegin", usd);
   lemonAfter = inputParent.insertAdjacentElement("beforeend", lemon);
+
+  console.log(switchInputBoolean.valueOf());
 }
 
 function callBoth() {
-  if ((lemonAfter = true) && (usdBefore = true)) {
+  if ((switchInputBoolean = true)) {
     multiplyLemon();
   } else {
     usdMultiply();
